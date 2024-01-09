@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import IconLogo from '../Svgs/IconLogo';
 import { slideUp, opacity } from './anim';
