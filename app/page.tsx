@@ -19,16 +19,20 @@ export default function Home() {
   return (
     <main className="h-full">
       <AnimatePresence mode="wait">{isLoading && <Loader />}</AnimatePresence>
-      <Header />
-      <div className="flex items-center flex-col-reverse lg:flex-row heightContent">
-        <Content />
-        <div className="noenee w-full h-full relative flex-1 heightContent">
-          <AnimatePresence mode="wait">
-            <RightContent />
-          </AnimatePresence>
-        </div>
-      </div>
-      <HowWorks />
+      {!isLoading && (
+        <>
+          <Header />
+          <div className="flex items-center flex-col-reverse lg:flex-row heightContent">
+            <Content />
+            <div className="noenee w-full h-full relative flex-1 heightContent">
+              <AnimatePresence mode="wait">
+                <RightContent />
+              </AnimatePresence>
+            </div>
+          </div>
+          <HowWorks />
+        </>
+      )}
     </main>
   );
 }
