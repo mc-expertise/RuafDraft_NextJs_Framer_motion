@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts.css';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --shadow-background-card: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow-y: scroll !important;
+  }
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  cursor: wait;
+}
+
+.heightContent {
+  height: calc(100vh - 162px);
+}
+.ShadowBackgroundCards {
+  box-shadow: var(--shadow-background-card);
+}
+
+.backgroundLoader {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 134, 27, 0.2) 0%,
+    rgba(255, 57, 94, 0.2) 100%
+  );
+}
+
+.svgCl {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+  z-index: 100;
+}
+
+.pathCl {
+  fill: #000;
+}
