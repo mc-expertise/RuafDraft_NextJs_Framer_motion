@@ -1,5 +1,4 @@
 import React from 'react';
-import ForwardBTN from '../Svgs/ForwardBTN';
 import Image from 'next/image';
 import { slideX } from './anim';
 import { motion } from 'framer-motion';
