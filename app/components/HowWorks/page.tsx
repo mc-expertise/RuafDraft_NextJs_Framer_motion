@@ -5,11 +5,7 @@ import { motion } from 'framer-motion';
 
 const HowWorks = () => {
   return (
-    <motion.div
-      variants={slideX}
-      initial="initial"
-      animate="animate"
-      className="flex gap-3 items-center justify-end pb-8">
+    <div className="flex gap-3 items-center justify-end pb-8">
       <p className="font-bold">3409 Active users</p>
       <div className="flex items-center gap-2">
         <Image width={55} height={55} src="/imgs/Ellipse.jpg" alt="no" />
@@ -30,7 +26,7 @@ const HowWorks = () => {
         />
         HOW IT WORKS
       </button>
-    </motion.div>
+    </div>
   );
 };
 
