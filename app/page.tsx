@@ -13,26 +13,22 @@ export default function Home() {
     setTimeout(() => {
       setisLoading(false);
       document.body.style.cursor = 'default';
-    }, 2000);
+    }, 1200);
   }, []);
 
   return (
     <main className="h-full">
       <AnimatePresence mode="wait">{isLoading && <Loader />}</AnimatePresence>
-      {!isLoading && (
-        <>
-          <Header />
-          <div className="flex items-center flex-col-reverse lg:flex-row heightContent">
-            <Content />
-            <div className="noenee w-full h-full relative flex-1 heightContent">
-              <AnimatePresence mode="wait">
-                <RightContent />
-              </AnimatePresence>
-            </div>
-          </div>
-          <HowWorks />
-        </>
-      )}
+      <Header />
+      <div className="flex items-center flex-col-reverse lg:flex-row heightContent">
+        <Content />
+        <div className="noenee w-full h-full relative flex-1 heightContent">
+          <AnimatePresence>
+            <RightContent />
+          </AnimatePresence>
+        </div>
+      </div>
+      <HowWorks />
     </main>
   );
 }
