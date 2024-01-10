@@ -8,7 +8,7 @@ const HowWorks = () => {
     <motion.div
       variants={slideX}
       initial="initial"
-      animate="exit"
+      animate="animate"
       className="flex gap-3 items-center justify-end pb-8">
       <p className="font-bold">3409 Active users</p>
       <div className="flex items-center gap-2">
